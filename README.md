@@ -46,7 +46,7 @@ All you need is any modern web browser (Google Chrome, Firefox, Microsoft Edge, 
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Mubarik23/web-development.git
+   https://github.com/Mubarik23/RICT-Project.git
    ```
 
 2. **Navigate into the project directory:**
