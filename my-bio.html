@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mubarik | Personal Bio & Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Anti-flicker theme initialization -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('portfolio-theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Top Navigation Header -->
+    <header class="site-header" id="top">
+        <div class="brand">
+            <a href="#" class="brand-name">Mubarik<span class="brand-accent"></span></a>
+        </div>
+        <nav class="nav-menu" aria-label="Main Navigation">
+            <a href="#about" class="nav-btn">About</a>
+            <a href="#skills" class="nav-btn">Skills</a>
+            <a href="#projects" class="nav-btn">Projects</a>
+            <a href="#contact" class="nav-btn nav-btn-cta">Contact</a>
+
+            <!-- Dark Mode / Light Mode Toggle Button -->
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark and Light Mode"
+                title="Toggle Dark/Light Mode">
+                <span class="theme-icon" aria-hidden="true"></span>
+                <span class="theme-label">Dark</span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="bio-card">
+        <!-- Profile Sidebar -->
+        <aside class="profile-header">
+            <div id="greeting-pill" class="greeting-pill">
+                <span class="greeting-icon"></span> Welcome to my space!
+            </div>
+            <div class="avatar-wrapper">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh_a9kku-dBQtzxFd7csJifISh5smt7htluJyTwHlGNQ&s=10"
+                    alt="Mubarik's Photo" width="115" height="115">
+            </div>
+            <h1>Mubarik</h1>
+            <span class="badge">
+                <span id="typed-text">Aspiring Web Developer</span>
+                <span class="type-cursor">|</span>
+            </span>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="bio-content">
+            <!-- About Section -->
+            <section class="bio-section about-section" id="about">
+                <h2 class="section-title">About Me</h2>
+                <p class="bio-text">
+                    My name is Mubarik, and I am an aspiring web developer with a passion for creating dynamic and
+                    user-friendly websites.
+                    I have experience in HTML, CSS, and JavaScript, and I am constantly learning new technologies to
+                    enhance my skills.
+                    In my free time, I enjoy exploring new programming languages and contributing to open-source
+                    projects.
+                    My goal is to build innovative web applications that make a positive impact on users' lives.
+                </p>
+            </section>
+
+            <!-- Skills & Tech Section -->
+            <section class="bio-section skills-section" id="skills">
+                <div class="section-header-flex">
+                    <h2 class="section-title">Skills & Technologies</h2>
+                    <div class="skills-filter" role="group" aria-label="Filter skills by category">
+                        <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+                        <button class="filter-btn" data-filter="frontend" aria-pressed="false">Frontend</button>
+                        <button class="filter-btn" data-filter="tools" aria-pressed="false">Tools & Core</button>
+                    </div>
+                </div>
+                <div class="skills-grid">
+                    <span class="skill-tag" data-category="frontend"><span class="skill-icon"></span> HTML5</span>
+                    <span class="skill-tag" data-category="frontend"><span class="skill-icon"></span> CSS3 & Modern
+                        UI</span>
+                    <span class="skill-tag" data-category="frontend"><span class="skill-icon"></span> JavaScript</span>
+                    <span class="skill-tag" data-category="frontend"><span class="skill-icon"></span> Responsive
+                        Design</span>
+                    <span class="skill-tag" data-category="tools"><span class="skill-icon"></span> Git & GitHub</span>
+                    <span class="skill-tag" data-category="tools"><span class="skill-icon"></span> Web
+                        Performance</span>
+                </div>
+            </section>
+
+            <!-- Projects & Links Section -->
+            <section class="bio-section links-section" id="projects">
+                <h2 class="section-title">Projects & Links</h2>
+                <div class="links-container">
+                    <span class="links-label">Explore my work & projects:</span>
+                    <a class="github-btn" href="https://github.com/Mubarik23" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub Profile
+                    </a>
+                </div>
+            </section>
+
+            <!-- Hobbies & Goals Section -->
+            <section class="bio-section hobbies-section">
+                <h2 class="section-title">Hobbies & Goals</h2>
+                <ul class="hobbies-list">
+                    <li>Learning new programming languages</li>
+                    <li>Contributing to open-source projects</li>
+                    <li>Building innovative web applications</li>
+                </ul>
+            </section>
+
+            <!-- Get In Touch / Contact Section -->
+            <section class="bio-section contact-section" id="contact">
+                <h2 class="section-title">Get In Touch</h2>
+                <form class="contact-form" id="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="e.g. John Doe" required
+                            autocomplete="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="e.g. john@example.com" required
+                            autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="4" maxlength="500"
+                            placeholder="Hi Mubarik, I would love to connect..." required></textarea>
+                        <div class="char-counter"><span id="char-count">0</span> / 500</div>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="submit-btn">
+                        <span>Send Message</span>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                        </svg>
+                    </button>
+                </form>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bio-footer">
+            <h3 class="footer-heading">Thank You for Visiting!</h3>
+            <p class="footer-text">© <span id="current-year">2026</span> Mubarik • Built with passion for modern web
+                development</p>
+        </footer>
+    </main>
+
+    <!-- Floating Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 4l-8 8h5v8h6v-8h5z" />
+        </svg>
+    </button>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas" class="confetti-canvas"></canvas>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

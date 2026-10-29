@@ -1,26 +1,32 @@
 # Mubarik - Personal Bio & Portfolio 🚀
 
-A modern, responsive, and aesthetically crafted personal bio and portfolio website built with pure HTML5 and Vanilla CSS3.
+A modern, responsive, and aesthetically crafted personal bio and portfolio website built with pure HTML5, Vanilla CSS3, and JavaScript.
 
 ---
 
 ## ✨ Features
 
-- **Modern Glassmorphic UI**: Sleek dark-mode aesthetic with vibrant accent glows, smooth gradients, and glassmorphic card styling.
+- **Dark Mode & Light Mode**: Seamless one-click switching between:
+  - **🌙 Dark Mode**: Sleek deep matte dark navy & midnight palette with refined dark blue accents, subtle shadows, and zero glare.
+  - **☀️ Light Mode**: Minimalist, high-contrast, ultra-clean **Black & White** aesthetic with crisp typography.
+  - Complete with local storage persistence and OS preference detection (`prefers-color-scheme`).
+- **Modern Glassmorphic UI**: Sleek aesthetic with vibrant blue accent glows, smooth gradients, and glassmorphic card styling.
+- **Animated Typewriter**: Dynamic role title cycling with realistic typing, cursor blinking, and transitions.
+- **Dynamic Time Greeting**: Automatically welcomes visitors based on local time (morning, afternoon, evening, night).
+- **Active Navigation (ScrollSpy)**: Real-time section tracking and smooth scrolling.
+- **Interactive Tech Filtering**: Filter skills by category (All, Frontend, Tools & Core) with smooth scale and fade animations.
+- **Smart Contact Form & Toasts**: Real-time validation, live message character counter, animated loading state, and glassmorphic floating toast alerts.
+- **Floating Back to Top**: Auto-revealing floating button with smooth scroll functionality.
+- **Interactive Mouse Spotlight & Confetti**: Dynamic cursor spotlight effect across the bio card and canvas confetti celebration on form submission or avatar interaction.
 - **Responsive Layout**: Fluid design tailored for all screen sizes (mobile, tablet, and desktop).
-- **Navigation Header**: Sticky top navigation bar with quick anchor links to sections.
-- **Profile Overview**: Avatar showcase, title badge, and an introductory summary.
-- **Skills Grid**: Interactive tags highlighting core web technologies and developer capabilities.
-- **Projects & Social Links**: Direct link to GitHub profile and project repositories.
-- **Interactive Contact Form**: Client-side contact form with interactive hover states and submission handling.
-- **Typography & Icons**: Styled with Google Fonts ([Outfit](https://fonts.google.com/specimen/Outfit)) and crisp SVG icons.
 
 ---
 
 ## 🛠️ Built With
 
 - **HTML5**: Semantic markup for accessible and SEO-friendly structure.
-- **CSS3 (Vanilla)**: Modern styling utilizing CSS custom properties (variables), Flexbox, CSS Grid, backdrop filters, and micro-animations.
+- **CSS3 (Vanilla)**: Modern styling with CSS custom properties (variables), Flexbox, CSS Grid, backdrop filters, and micro-animations.
+- **JavaScript (Vanilla ES6+)**: Pure, modular, zero-dependency interactivity (DOM manipulation, IntersectionObserver, dynamic themes, form validation, and canvas particles).
 - **Google Fonts**: [Outfit](https://fonts.google.com/specimen/Outfit) for modern and legible typography.
 
 ---
@@ -29,8 +35,9 @@ A modern, responsive, and aesthetically crafted personal bio and portfolio websi
 
 ```plaintext
 web Development/
-├── my-bio.html    # Main HTML page containing structure and sections
-├── style.css      # Core stylesheet containing styles, animations, and responsive design
+├── my-bio.html    # Main HTML page containing structure, sections, and theme toggle
+├── style.css      # Core stylesheet containing Black & White and Electric Blue Dark themes
+├── script.js     # Vanilla JavaScript handling theme switching, interactivity, and animations
 └── README.md      # Project documentation
 ```
 
@@ -46,7 +53,7 @@ All you need is any modern web browser (Google Chrome, Firefox, Microsoft Edge, 
 
 1. **Clone the repository:**
    ```bash
-   https://github.com/Mubarik23/RICT-Project.git
+   git clone https://github.com/Mubarik23/RICT-Project.git
    ```
 
 2. **Navigate into the project directory:**
@@ -60,8 +67,9 @@ All you need is any modern web browser (Google Chrome, Firefox, Microsoft Edge, 
 
 ---
 
-## 🎨 Customization
+## 🎨 Themes & Customization
 
+- **Dark & Light Mode**: Toggle themes instantly via the header button. Themes persist across browser sessions using `localStorage`.
 - **Profile Details**: Update your name, avatar image URL, and bio text inside `my-bio.html`.
 - **Skills & Links**: Add or edit skills in the `.skills-grid` section, and update your GitHub URL in the `#projects` section.
 - **Theme Colors & Styles**: Modify the CSS variables in `style.css` (such as colors, fonts, and spacing) to personalize the look and feel.
